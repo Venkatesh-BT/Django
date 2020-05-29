@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Player Info</title>
+	
+</head>
+<body>
+	<h1>The cricketrs details are</h1>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Salary</th>
+			<th>Email</th>
+		
+		</tr>
+		{% if lst %}
+			{% for i in lst  %}
+			<tr>
+				<td>{{ i.name }}</td>
+				<td>{{ i.salary }}</td>
+				<td>{{ i.email_id }}</td>
+				
+			</tr>	
+			{% endfor %}
+			{% else %}
+				No data found
+		{% endif %}
+</table>
+
+</body>
+</html>

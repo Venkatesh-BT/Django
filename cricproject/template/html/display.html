@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Player Info</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/display.css" %}">
+</head>
+<body>
+	<h1>The cricketrs details are</h1>
+	<table border="1">
+		<tr>
+			<th>name</th>
+			<th>jersy_num</th>
+			<th>address</th>
+			<th>department</th>
+		</tr>
+		{% if lst %}
+			{% for i in lst  %}
+			<tr>
+				<td>{{ i.name }}</td>
+				<td>{{ i.jersy_num }}</td>
+				<td>{{ i.address }}</td>
+				<td>{{ i.department }}</td>
+			</tr>	
+			{% endfor %}
+			{% else %}
+				No data found
+		{% endif %}
+</table>
+
+</body>
+</html>
